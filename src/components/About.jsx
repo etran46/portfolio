@@ -13,8 +13,10 @@ const About = () => {
               and intuitive design.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or sharing knowledge with the developer community.
+              When I'm not coding, 
+              you can find me exploring new technologies, 
+              in the gym, or 
+              sharing knowledge with the developer community.
             </p>
             <div className="about-stats">
               <div className="stat-item">

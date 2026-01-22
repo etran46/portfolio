@@ -15,7 +15,7 @@ const Skills = () => {
     {
       icon: '🛠️',
       title: 'Tools',
-      skills: ['Git', 'Docker', 'AWS', 'Figma']
+      skills: ['Git', 'Docker', 'Figma']
     }
   ];
 
