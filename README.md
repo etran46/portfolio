@@ -1,5 +1,5 @@
-# Portfolio Website - React + Vite
+# Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite.
+portfolio website
 
 
