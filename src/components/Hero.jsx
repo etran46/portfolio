@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <img 
-            src="/img/bassbob.png" 
+            src="/img/gradpic.png" 
             alt="Elijah Tran" 
             className="hero-image-img"
             onClick={() => window.open('https://www.linkedin.com/in/elijahtran26/', '_blank')}
