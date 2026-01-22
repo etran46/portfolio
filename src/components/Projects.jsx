@@ -43,14 +43,14 @@ const Projects = () => {
                     <span key={techIndex} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                <div className="project-links">
+                {/* <div className="project-links">
                   <a href={project.demo} className="project-link" target="_blank" rel="noopener noreferrer">
                     Live Demo
                   </a>
                   <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
                     GitHub
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
