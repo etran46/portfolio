@@ -43,14 +43,14 @@ const Contact = () => {
               <div className="contact-icon">💼</div>
               <div>
                 <h3>LinkedIn</h3>
-                <p>linkedin.com/in/yourprofile</p>
+                <p>https://www.linkedin.com/in/elijahtran26/</p>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">🐙</div>
               <div>
                 <h3>GitHub</h3>
-                <p>github.com/yourusername</p>
+                <p>https://github.com/etran46</p>
               </div>
             </div>
           </div>
