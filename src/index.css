@@ -624,6 +624,19 @@ section {
     gap: 1.5rem;
 }
 
+.contact-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
 .form-group {
     display: flex;
     flex-direction: column;

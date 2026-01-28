@@ -43,19 +43,29 @@ const Contact = () => {
               <div className="contact-icon">💼</div>
               <div>
                 <h3>LinkedIn</h3>
-                <p>https://www.linkedin.com/in/elijahtran26/</p>
+                <p className="contact-link" onClick={() => window.open('https://www.linkedin.com/in/elijahtran26/', '_blank')}>
+                https://www.linkedin.com/in/elijahtran26/</p>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">🐙</div>
               <div>
                 <h3>GitHub</h3>
-                <p>https://github.com/etran46</p>
+                <p className="contact-link" onClick={() => window.open('https://github.com/etran46', '_blank')}>
+                https://github.com/etran46</p>
               </div>
-              <div className="contact-item">
-                <h3>
-
-                </h3>
+            </div>  
+            <div className="contact-item">
+              <div className="contact-icon">📄</div>
+              <div>
+                <h3>Resume</h3>
+                <a
+                  className="contact-link"
+                  href="/img/Resume.pdf"
+                  download="Elijah_Tran_Resume.pdf"
+                >
+                  Download Resume
+                </a>
               </div>
             </div>
           </div>
