@@ -17,10 +17,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="nav-container">
         <div className="logo">Portfolio</div>
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        <ul id="nav-menu" className={`nav-menu ${isMenuOpen ? 'active' : ''}`} role="menubar">
           <li>
             <a href="#home" className="nav-link" onClick={(e) => handleScroll(e, '#home')}>
               Home
@@ -47,14 +47,18 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <div 
-          className="hamburger" 
+        <button
+          type="button"
+          className="hamburger"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-expanded={isMenuOpen}
+          aria-controls="nav-menu"
+          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </div>
     </nav>
   );

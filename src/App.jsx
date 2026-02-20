@@ -61,11 +61,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
+      <main id="main-content" tabIndex={-1}>
+        <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
+      </main>
       <Footer />
     </div>
   );

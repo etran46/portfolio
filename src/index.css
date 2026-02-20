@@ -25,6 +25,27 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Skip link - visually hidden until focused */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0.5rem;
+    z-index: 10000;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
@@ -127,11 +148,21 @@ section {
     width: 100%;
 }
 
+.nav-link:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     gap: 4px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
 }
 
 .hamburger span {
@@ -140,6 +171,11 @@ section {
     background: var(--text-primary);
     transition: all 0.3s ease;
     border-radius: 2px;
+}
+
+.hamburger:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
 }
 
 /* Hero Section */
@@ -230,8 +266,24 @@ section {
 .hero-description {
     font-size: 1.125rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
     line-height: 1.8;
+}
+
+.hero-outcome {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.specialization {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
 }
 
 .hero-buttons {
@@ -273,6 +325,11 @@ section {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
 }
 
 .hero-image {
@@ -658,6 +715,41 @@ section {
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
+.form-input:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 0;
+}
+
+.form-input.error {
+    border-color: #dc2626;
+}
+
+.form-error {
+    font-size: 0.875rem;
+    color: #dc2626;
+    margin-top: 0.25rem;
+}
+
+.form-success {
+    padding: 1rem;
+    background: #d1fae5;
+    color: #065f46;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .form-textarea {
     resize: vertical;
     min-height: 120px;
@@ -692,6 +784,17 @@ section {
 
 .footer-links a:hover {
     color: var(--primary-color);
+}
+
+.footer-links a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.project-link:focus-visible,
+.contact-link:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 /* Responsive Design */
@@ -763,6 +866,21 @@ section {
 
     .section-title {
         font-size: 2rem;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
     }
 }
 
